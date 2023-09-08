@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+
+<!-- Calculator Start -->
+<div class="cal-body">
+    <div class="main_div">
+        <!-- Screen Start -->
+            <input type="text" class="screen" id="display" name="display" placeholder="0" disabled>
+        <!-- Screen End -->
+
+        <!-- Buttons Start -->
+        <div class="buttons">
+            <table >
+                <!-- Row 1 Start -->
+                <tr>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="7" onclick="calcNumbers(this.value)">7</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="8" onclick="calcNumbers(this.value)">8</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="9" onclick="calcNumbers(this.value)">9</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn2" style="padding: 15px 22px" value="/" onclick="calcNumbers(this.value)">/</button>
+                        </div>
+                        
+                    </td>
+                </tr>
+
+                <!-- Row 1 End -->
+
+
+                <!-- Row 2 Start -->
+                <tr>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="4" onclick="calcNumbers(this.value)">4</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="5" onclick="calcNumbers(this.value)">5</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="6" onclick="calcNumbers(this.value)">6</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" style="padding: 15px 22px" value="*" onclick="calcNumbers(this.value)">*</button>
+                        </div>
+                        
+                    </td>
+                </tr>
+
+                <!-- Row 2 End -->
+
+
+                <!-- Row 3 Start -->
+                <tr>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="1" onclick="calcNumbers(this.value)">1</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="2" onclick="calcNumbers(this.value)">2</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="3" onclick="calcNumbers(this.value)">3</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn2" style="padding: 15px 24px" value="-" onclick="calcNumbers(this.value)">-</button>
+                        </div>
+                        
+                    </td>
+                </tr>
+
+                <!-- Row 3 End -->
+
+
+                <!-- Row 4 Start -->
+                <tr>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn" value="0" onclick="calcNumbers(this.value)">0</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn2" style="padding: 15px 22px" value="." onclick="calcNumbers(this.value)">.</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" class="btnn2" value="+" onclick="calcNumbers(this.value)">+</button>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <div class="effect">
+                            <button type="button" style="padding: 15px 22px;" class="btnn2" value="=" onclick="calculate()">=</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Row 4 End -->
+
+
+                <!-- Row 5 Start -->
+                <tr>
+                    <td colspan="3">
+                        <div class="effect">
+                            <button type="button" style="padding: 15px 90px;" class="btnn" value="AC" onclick="clearscreen()">AC</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Row 5 End -->
+
+
+                <!-- Footer Start -->
+                <tr>
+                    <td colspan="4">
+                        <div class="footer">
+                            <h5>This Calculator is Created By Ahmad Rashid</h5>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Footer End -->
+            </table>
+        </div>  
+    </div>
+</div>
+
+<!-- Calculator Body End -->
+
+
+
+<!-- Scripting Start -->
+
+<script>
+
+    // Function To Append Values and Display it on Screen
+
+    function calcNumbers(result)
+    {
+        document.querySelector('#display').value += result;
+    }
+
+
+    // Function To Clear Screen
+
+    function clearscreen()
+    {
+        document.getElementById("display").value="";
+    }
+
+    // Function To Calculate Result
+    
+    function calculate() 
+    {
+    
+    var a = document.getElementById("display").value;
+    var b = eval(a);
+    document.getElementById("display").value = b;
+    
+    }
+</script>
+
+<!-- Scripting End -->
+   
+    
+</body>
+</html>
